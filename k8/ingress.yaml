@@ -6,10 +6,9 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: php.app
-    http:
+   - http:
       paths:
-      - path: /
+      - path: /phpservice
         backend:
           serviceName: phpservice
           servicePort: 80
