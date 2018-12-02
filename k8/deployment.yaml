@@ -1,0 +1,20 @@
+
+# Create a pod containing the PHP-FPM application (my-php-app)
+# and nginx, each mounting the `shared-files` volume to their
+# respective /var/www/html directories.
+
+kind: Deployment
+apiVersion: extensions/v1beta1
+metadata:
+  name: phpsvc
+spec:
+  replicas: 3
+  template:
+    metadata:
+      name: phpsvc
+      labels:
+        app: phpsvc
+    spec:
+      containers:
+        - image: app:1
+          name: app
