@@ -11,7 +11,7 @@ spec:
         app: phpsvc
     spec:
       containers:
-        - image: app:1
+        - image: s4saif/app:1
           name: app
           resources:
             requests:
